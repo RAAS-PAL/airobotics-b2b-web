@@ -4,6 +4,7 @@ import { IBM_Plex_Sans, IBM_Plex_Mono, IBM_Plex_Sans_Thai } from "next/font/goog
 import "../globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { Analytics } from "@/components/analytics";
 import { SITE_URL } from "@/lib/site";
 import { locales, isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary, translator } from "@/lib/i18n/dictionary";
@@ -121,6 +122,7 @@ export default async function RootLayout({
         />
         <main className="flex-1">{children}</main>
         <SiteFooter locale={locale} />
+        <Analytics />
       </body>
     </html>
   );
