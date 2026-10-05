@@ -57,10 +57,17 @@ const CLEAR = { r: 255, g: 255, b: 255, alpha: 0 };
  * The Apple touch icon can do neither. iOS composites a transparent one onto
  * black, which would erase the navy, and masks it with a rounded rectangle of
  * roughly 22% corner radius — and the mark's widest points are its two lower
- * corners, exactly what that mask cuts. So: white ground, real margin. */
+ * corners, exactly what that mask cuts. So: white ground, real margin.
+ *
+ * public/logo.png is the logo named in the Organization structured data,
+ * which Google may show beside the company in search. Google renders it on
+ * white, so it is built on white, and it needs a plain URL — the app/ icons
+ * are served with a hashed query string, and the brand symbol itself is a
+ * 5000px original. */
 for (const [file, size, margin, ground] of [
   ["app/icon.png", 512, 0.03, CLEAR],
   ["app/apple-icon.png", 180, 0.12, WHITE],
+  ["public/logo.png", 512, 0.1, WHITE],
 ]) {
   const inner = Math.round(size * (1 - margin * 2));
 
