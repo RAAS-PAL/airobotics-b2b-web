@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import { media as mediaUrl } from "@/lib/media";
 
 type MediaCommon = {
   alt: string;
@@ -27,7 +28,7 @@ export type MediaItem = MediaCommon &
       }
     | {
         kind: "video";
-        /** a file in public/reference/, or a full https:// URL (e.g. Cloudinary) */
+        /** a file in public/reference/, or a full https:// URL (e.g. the S3 media host) */
         src: string;
         /** still frame shown before play. Local import or a URL — strongly
          *  recommended, otherwise the player shows a black rectangle. */
@@ -40,18 +41,15 @@ export type MediaItem = MediaCommon &
       }
   );
 
-/** Derives a poster frame and an mp4-forced delivery URL from a Cloudinary
- *  video URL. Cloudinary decides the delivery format from the URL's own
- *  extension regardless of what was uploaded, so a source ingested as .mov
- *  can still be requested as .mp4 for broad browser support — and a still
- *  frame is just the same URL with an so_0 (seek-offset 0s) transform and a
- *  .jpg extension swapped in, no separate upload required. */
-function cloudinaryVideo(url: string) {
-  const mp4 = url.replace(/\.\w+$/, ".mp4");
-  const poster = url
-    .replace("/video/upload/", "/video/upload/so_0/")
-    .replace(/\.\w+$/, ".jpg");
-  return { src: mp4, poster };
+/** A clip in the media bucket (lib/media.ts) and its poster still. S3 serves
+ *  files as uploaded, so both are real files: `<file>` is an H.264 .mp4 with
+ *  its index at the front, and `<name>-poster.jpg` its first frame. */
+function s3Video(file: string) {
+  const name = file.replace(/(-web)?\.mp4$/, "");
+  return {
+    src: mediaUrl(`AIRobotic/${file}`),
+    poster: mediaUrl(`AIRobotic/${name}-poster.jpg`),
+  };
 }
 
 /* Deployment photography and video. See public/reference/README.md for what
@@ -60,9 +58,7 @@ export const media: MediaItem[] = [
   {
     kind: "video",
     reference: "aspirus-hospital",
-    ...cloudinaryVideo(
-      "https://res.cloudinary.com/ddb7pxqfd/video/upload/v1787586675/Aspirus_Hospital_qkjfoy.mov"
-    ),
+    ...s3Video("Aspirus_Hospital_qkjfoy-web.mp4"),
     alt: "AI Robotics deployment footage from Aspirus Hospital, Wausau, Wisconsin",
     caption: "Aspirus Hospital — Wausau, Wisconsin",
   },
@@ -70,18 +66,14 @@ export const media: MediaItem[] = [
     kind: "video",
     reference: "beacon-hill",
     fit: "contain", // shot portrait — a 16:9 crop would lose most of it
-    ...cloudinaryVideo(
-      "https://res.cloudinary.com/ddb7pxqfd/video/upload/v1787586695/Beacon_Hill_ifegdw.mp4"
-    ),
+    ...s3Video("Beacon_Hill_ifegdw-web.mp4"),
     alt: "AI Robotics deployment footage from Beacon Hill, Detroit, Michigan",
     caption: "Beacon Hill — Detroit, Michigan",
   },
   {
     kind: "video",
     reference: "inn-of-the-mountain-gods",
-    ...cloudinaryVideo(
-      "https://res.cloudinary.com/ddb7pxqfd/video/upload/v1787586675/IMG_l9bhes.mp4"
-    ),
+    ...s3Video("IMG_l9bhes.mp4"),
     alt: "AI Robotics deployment footage from Inn of the Mountain Gods, Albuquerque, New Mexico",
     caption: "Inn of the Mountain Gods — Albuquerque, New Mexico",
   },
