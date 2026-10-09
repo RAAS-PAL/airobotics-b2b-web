@@ -30,6 +30,12 @@ signage you do not have permission to publish.
 e.g. `/reference/aspirus-night.mp4`. Also supply a poster still; without one the
 player shows a black rectangle until it loads.
 
+**Clips kept in the media bucket** (S3, folder `AIRobotic/`; the current site
+footage lives there) — upload the `.mp4` with its poster as `<name>-poster.jpg`
+next to it, then add it with `s3Video("<file>.mp4")`. How to prepare the files
+is at the top of `lib/media.ts`; the address can be moved with
+`NEXT_PUBLIC_MEDIA_BASE_URL`.
+
 **Anything longer** — put it on YouTube and use the `youtube` kind with just the
 video id. Self-hosting large files bloats the repo and slows the page, and the
 embed is privacy-friendly (`youtube-nocookie`).
