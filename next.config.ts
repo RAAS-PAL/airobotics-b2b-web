@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import { mediaBaseUrl } from "./lib/media";
+
+const mediaHost = new URL(mediaBaseUrl);
 
 const nextConfig: NextConfig = {
   images: {
@@ -8,15 +11,16 @@ const nextConfig: NextConfig = {
        gradients band at the default 75. */
     qualities: [75, 92],
 
-    /* Reference photography is hosted on Cloudinary rather than committed,
-       so deployment footage never bloats the repo. Scoped to the delivery
-       host only — remote image config is a fetch-on-behalf-of primitive, so
-       it stays as narrow as it can be. */
+    /* Reference media is hosted in S3 (lib/media.ts) rather than committed,
+       so deployment footage never bloats the repo. Scoped to that host's
+       AIRobotic/ folder only — remote image config is a fetch-on-behalf-of
+       primitive, so it stays as narrow as it can be. The host follows
+       NEXT_PUBLIC_MEDIA_BASE_URL. */
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        pathname: "/**",
+        protocol: mediaHost.protocol.replace(":", "") as "https" | "http",
+        hostname: mediaHost.hostname,
+        pathname: `${mediaHost.pathname.replace(/\/$/, "")}/AIRobotic/**`,
       },
     ],
   },
