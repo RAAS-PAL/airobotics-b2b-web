@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { visibleRobots as sourceRobots } from "@/lib/robots";
 import { robotImages } from "@/lib/robot-images";
+import { pageMetadata } from "@/lib/page-metadata";
 import { getDictionary, translator } from "@/lib/i18n/dictionary";
 import { localizeRobots } from "@/lib/i18n/localize-robots";
 import { isLocale, localePath, locales, localeUnits, type Locale } from "@/lib/i18n/config";
@@ -32,10 +33,13 @@ export async function generateMetadata({
   const dict = await getDictionary(lang);
   const robot = localizeRobots(dict, lang).find((r) => r.slug === slug);
   if (!robot) return {};
-  return {
+  return pageMetadata({
+    t: translator(dict),
+    locale: lang,
+    path: `/robots/${slug}`,
     title: `${robot.model} — ${robot.kind}`,
     description: robot.pitch,
-  };
+  });
 }
 
 export default async function RobotPage({

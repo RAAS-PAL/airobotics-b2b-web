@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Eyebrow } from "@/components/ui";
 import { QuoteForm } from "./quote-form";
+import { pageMetadata } from "@/lib/page-metadata";
 import { getDictionary, translator } from "@/lib/i18n/dictionary";
 import { localizeRobots } from "@/lib/i18n/localize-robots";
 import { isLocale, type Locale } from "@/lib/i18n/config";
@@ -12,10 +13,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!isLocale(lang)) return {};
   const t = translator(await getDictionary(lang));
-  return {
+  return pageMetadata({
+    t,
+    locale: lang,
+    path: "/quote",
     title: t("CONTACT.meta_title"),
     description: t("CONTACT.meta_description"),
-  };
+  });
 }
 
 const stepKeys = [1, 2, 3] as const;

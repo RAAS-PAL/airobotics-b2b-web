@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Eyebrow } from "@/components/ui";
 import { Reveal } from "@/components/reveal";
 import { CopyId } from "@/components/copy-id";
+import { pageMetadata } from "@/lib/page-metadata";
 import { getDictionary, translator } from "@/lib/i18n/dictionary";
 import { isLocale, localePath, type Locale } from "@/lib/i18n/config";
 import { contact, contactAddress } from "@/lib/contact";
@@ -16,10 +17,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!isLocale(lang)) return {};
   const t = translator(await getDictionary(lang));
-  return {
+  return pageMetadata({
+    t,
+    locale: lang,
+    path: "/contact",
     title: t("CONTACTPAGE.meta_title"),
     description: t("CONTACTPAGE.meta_description"),
-  };
+  });
 }
 
 /** How to reach a person — distinct from /quote, which is the form. A buyer

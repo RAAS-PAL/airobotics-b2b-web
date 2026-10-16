@@ -5,6 +5,7 @@ import { RobotCard } from "@/components/robot-card";
 import { Reveal } from "@/components/reveal";
 import { Eyebrow } from "@/components/ui";
 import { QuoteBand } from "@/components/quote-band";
+import { pageMetadata } from "@/lib/page-metadata";
 import { getDictionary, translator, type T } from "@/lib/i18n/dictionary";
 import { localizeRobots } from "@/lib/i18n/localize-robots";
 import { isLocale, localePath, localeUnits, type Locale } from "@/lib/i18n/config";
@@ -15,10 +16,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!isLocale(lang)) return {};
   const t = translator(await getDictionary(lang));
-  return {
+  return pageMetadata({
+    t,
+    locale: lang,
+    path: "/robots",
     title: t("FLEET.meta_title"),
     description: t("FLEET.meta_description"),
-  };
+  });
 }
 
 /** slug → row value */
