@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { track } from "@/components/analytics";
 
 /** Click-to-copy for a short value like a LINE id — the thing a visitor on a
  *  phone would otherwise have to select by hand.
@@ -13,6 +14,7 @@ export function CopyId({
   hint,
   copied: copiedLabel,
   ariaLabel,
+  trackAs,
 }: {
   value: string;
   /** resting hint, e.g. "Tap to copy" */
@@ -21,6 +23,10 @@ export function CopyId({
   copied: string;
   /** full instruction for screen readers, e.g. "Copy LINE ID @raaspal" */
   ariaLabel: string;
+  /** Counted as a contact attempt under this method when set. A string, not
+   *  a callback: the pages using this are server components, and a function
+   *  cannot cross into a client component. */
+  trackAs?: string;
 }) {
   const [copied, setCopied] = useState(false);
 
@@ -36,6 +42,7 @@ export function CopyId({
     try {
       await navigator.clipboard.writeText(value);
       setCopied(true);
+      if (trackAs) track("click_contact", { method: trackAs });
     } catch {
       // Refused or unavailable — the id is still selectable above.
     }

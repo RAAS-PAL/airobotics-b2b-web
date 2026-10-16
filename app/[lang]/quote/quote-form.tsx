@@ -1,7 +1,8 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import { submitQuote, type QuoteFormState } from "./actions";
+import { track } from "@/components/analytics";
 
 export type QuoteFormStrings = {
   name: string; namePlaceholder: string;
@@ -66,6 +67,14 @@ export function QuoteForm({
   strings: QuoteFormStrings;
 }) {
   const [state, action, pending] = useActionState(submitQuote, initialState);
+
+  /* The conversion that matters most. generate_lead is GA4's own recommended
+   * name, so it can be marked as a key event and imported into Google Ads as
+   * a conversion without renaming. Above the early return: a hook must run
+   * on every render, including the one that shows the success panel. */
+  useEffect(() => {
+    if (state.status === "success") track("generate_lead");
+  }, [state.status]);
 
   if (state.status === "success") {
     return (
