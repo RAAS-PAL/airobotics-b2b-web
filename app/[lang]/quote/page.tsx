@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Eyebrow } from "@/components/ui";
 import { QuoteForm } from "./quote-form";
 import { pageMetadata } from "@/lib/page-metadata";
+import { contact } from "@/lib/contact";
 import { getDictionary, translator } from "@/lib/i18n/dictionary";
 import { localizeRobots } from "@/lib/i18n/localize-robots";
 import { isLocale, type Locale } from "@/lib/i18n/config";
@@ -105,8 +106,11 @@ export default async function ContactPage({
               errorName: t("CONTACT.form.error_name"),
               errorEmail: t("CONTACT.form.error_email"),
               errorPhone: t("CONTACT.form.error_phone"),
-              errorDelivery: t("CONTACT.form.error_generic"),
-              errorUnexpected: t("CONTACT.form.error_unexpected"),
+              /* The fallback when a request can't be sent, so it must be an
+                 inbox that receives mail. airoboticsth.com has none; the
+                 address comes from lib/contact.ts, the one the site lists. */
+              errorDelivery: t("CONTACT.form.error_generic", { email: contact.email }),
+              errorUnexpected: t("CONTACT.form.error_unexpected", { email: contact.email }),
             }}
           />
         </div>
