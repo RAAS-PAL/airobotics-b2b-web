@@ -5,10 +5,13 @@ import { locales, localePath } from "@/lib/i18n/config";
 
 /* Every page exists in both languages, so each URL is emitted per locale with
  * `alternates.languages` pointing at its counterparts. Without that, search
- * engines treat the Thai and English pages as unrelated duplicates. */
+ * engines treat the Thai and English pages as unrelated duplicates.
+ *
+ * No lastModified. Nothing here knows when a page's content last changed;
+ * stamping the build time told search engines every page changed on every
+ * deploy. Google only trusts lastmod that is consistently accurate and
+ * ignores it otherwise, so an honest gap beats a false date. */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
   const paths: { path: string; priority: number; freq: "monthly" | "yearly" }[] = [
     { path: "/", priority: 1, freq: "monthly" },
     { path: "/robots", priority: 0.9, freq: "monthly" },
@@ -25,7 +28,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return paths.flatMap(({ path, priority, freq }) =>
     locales.map((locale) => ({
       url: `${SITE_URL}${localePath(locale, path)}`,
-      lastModified: now,
       changeFrequency: freq,
       priority,
       alternates: {

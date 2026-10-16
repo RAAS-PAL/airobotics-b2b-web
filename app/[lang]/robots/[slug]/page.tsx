@@ -13,6 +13,7 @@ import { RobotCard } from "@/components/robot-card";
 import { Reveal } from "@/components/reveal";
 import { Eyebrow, StatTile } from "@/components/ui";
 import { QuoteBand } from "@/components/quote-band";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld";
 
 export function generateStaticParams() {
   return locales.flatMap((lang) =>
@@ -113,6 +114,12 @@ export default async function RobotPage({
               <span aria-hidden="true"> / </span>
               <span className="text-amber">{robot.model}</span>
             </nav>
+            <BreadcrumbJsonLd
+              items={[
+                { name: t("ROBOTDETAIL.breadcrumb"), path: localePath(locale, "/robots") },
+                { name: robot.model, path: localePath(locale, `/robots/${robot.slug}`) },
+              ]}
+            />
             <h1 className="display mt-6 text-5xl text-snow sm:text-6xl">
               {robot.model}
             </h1>
