@@ -7,11 +7,15 @@ import {
   type Lead,
 } from "./quote-email";
 
+/** Outcomes as codes, not sentences. The action can't tell which language
+ *  the page is in, so the English it used to return showed on /th too; the
+ *  form turns each code into the visitor's language from the dictionary. */
 export type QuoteFormState = {
   status: "idle" | "error" | "success";
-  /** field name → message */
-  errors?: Record<string, string>;
-  message?: string;
+  /** required fields that failed validation */
+  invalid?: ("name" | "email" | "phone")[];
+  /** why the request as a whole failed */
+  failure?: "delivery" | "unexpected";
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -77,7 +81,7 @@ export async function submitQuote(
   try {
     // Honeypot: real users never see or fill this field.
     if (formData.get("website")) {
-      return { status: "success", message: "Thanks — we’ll be in touch." };
+      return { status: "success" };
     }
 
     const name = String(formData.get("name") ?? "").trim();
@@ -89,14 +93,13 @@ export async function submitQuote(
     const facility = String(formData.get("facility") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
 
-    const errors: Record<string, string> = {};
-    if (name.length < 2) errors.name = "Enter your name.";
-    if (!EMAIL_RE.test(email)) errors.email = "Enter a valid email address.";
-    if (phone.replace(/\D/g, "").length < 6)
-      errors.phone = "Enter a phone number we can reach you on.";
+    const invalid: NonNullable<QuoteFormState["invalid"]> = [];
+    if (name.length < 2) invalid.push("name");
+    if (!EMAIL_RE.test(email)) invalid.push("email");
+    if (phone.replace(/\D/g, "").length < 6) invalid.push("phone");
 
-    if (Object.keys(errors).length > 0) {
-      return { status: "error", errors };
+    if (invalid.length > 0) {
+      return { status: "error", invalid };
     }
 
     const lead: Lead = {
@@ -123,25 +126,13 @@ export async function submitQuote(
       // copy, and it can be recovered by hand from the platform logs.
       console.error("[quote] DELIVERY FAILED — lead follows", err);
       console.error("[quote] LEAD", JSON.stringify(lead));
-      return {
-        status: "error",
-        message:
-          "We couldn’t submit your request. Please email us directly at quotes@airoboticsth.com and we’ll pick it up straight away.",
-      };
+      return { status: "error", failure: "delivery" };
     }
 
     console.log("[quote] new lead", lead.email, lead.robot ?? "(no model)");
-    return {
-      status: "success",
-      message:
-        "Quote request received. We’ll come back to you within one business day.",
-    };
+    return { status: "success" };
   } catch (err) {
     console.error("[quote] UNEXPECTED ACTION FAILURE", err);
-    return {
-      status: "error",
-      message:
-        "Something went wrong. Please email us directly at quotes@airoboticsth.com.",
-    };
+    return { status: "error", failure: "unexpected" };
   }
 }

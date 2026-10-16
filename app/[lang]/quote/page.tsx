@@ -101,6 +101,12 @@ export default async function ContactPage({
               submit: t("CONTACT.form.submit_button"),
               submitPending: t("CONTACT.form.submit_button_pending"),
               successHeading: t("CONTACT.form.success_heading"),
+              successBody: t("CONTACT.form.success_body"),
+              errorName: t("CONTACT.form.error_name"),
+              errorEmail: t("CONTACT.form.error_email"),
+              errorPhone: t("CONTACT.form.error_phone"),
+              errorDelivery: t("CONTACT.form.error_generic"),
+              errorUnexpected: t("CONTACT.form.error_unexpected"),
             }}
           />
         </div>
