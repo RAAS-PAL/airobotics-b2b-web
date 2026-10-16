@@ -174,7 +174,7 @@ TH:
 --- Hero ---
 
 [HOME.hero.eyebrow]
-EN: AI Robotics · Autonomous cleaning fleet
+EN: Autonomous floor-cleaning robots for business
 TH:
 
 [HOME.hero.h1]

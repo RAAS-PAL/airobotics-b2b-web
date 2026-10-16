@@ -174,8 +174,8 @@ TH: ดูหุ่นยนต์ทั้งหมด
 --- Hero ---
 
 [HOME.hero.eyebrow]
-EN: AI Robotics · Autonomous cleaning fleet
-TH: AI Robotics · หุ่นยนต์ทำความสะอาดอัตโนมัติ
+EN: Autonomous floor-cleaning robots for business
+TH: หุ่นยนต์ทำความสะอาดพื้นอัตโนมัติ สำหรับธุรกิจ
 
 [HOME.hero.h1]
 EN: The night shift that never calls in sick
