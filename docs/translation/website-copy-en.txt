@@ -22,7 +22,7 @@ DO NOT TRANSLATE — leave these exactly as-is wherever they appear
   Units of measurement:  mm, cm, m, kg, L, gal, in, ft, h, min, kPa,
                           m²/h, TOPS, dB, kg, Ah, W
   Numbers and specs themselves (700, 21,674, 96-beam, etc.)
-  URLs and email addresses (airoboticsth.com, quotes@airoboticsth.com)
+  URLs, email addresses and anything in braces (airoboticsth.com, {email}, {model})
 
 Numerals: use whichever numeral style your team prefers for Thai
 (Thai numerals ๐-๙ or Arabic 0-9 as commonly used in Thai business
@@ -2591,11 +2591,11 @@ EN: Enter a phone number we can reach you on.
 TH:
 
 [CONTACT.form.error_generic]
-EN: We couldn't submit your request. Please email us directly at quotes@airoboticsth.com and we'll pick it up straight away.
+EN: We couldn't submit your request. Please email us directly at {email} and we'll pick it up straight away.
 TH:
 
 [CONTACT.form.error_unexpected]
-EN: Something went wrong. Please email us directly at quotes@airoboticsth.com.
+EN: Something went wrong. Please email us directly at {email}.
 TH:
 
 --- Success state (shown after submitting) ---

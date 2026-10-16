@@ -14,7 +14,9 @@ export type QuoteFormStrings = {
   facility: string; facilityPlaceholder: string;
   message: string; messagePlaceholder: string;
   submit: string; submitPending: string;
-  successHeading: string;
+  successHeading: string; successBody: string;
+  errorName: string; errorEmail: string; errorPhone: string;
+  errorDelivery: string; errorUnexpected: string;
 };
 
 type RobotOption = { slug: string; model: string; kind: string };
@@ -84,13 +86,24 @@ export function QuoteForm({
         </p>
         <h2 className="display mt-4 text-2xl text-snow">{strings.successHeading}</h2>
         <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-fog">
-          {state.message}
+          {strings.successBody}
         </p>
       </div>
     );
   }
 
-  const errors = state.errors ?? {};
+  const invalid = new Set(state.invalid);
+  const errors = {
+    name: invalid.has("name") ? strings.errorName : undefined,
+    email: invalid.has("email") ? strings.errorEmail : undefined,
+    phone: invalid.has("phone") ? strings.errorPhone : undefined,
+  };
+  const failure =
+    state.failure === "delivery"
+      ? strings.errorDelivery
+      : state.failure === "unexpected"
+        ? strings.errorUnexpected
+        : undefined;
 
   return (
     <form action={action} noValidate className="space-y-6">
@@ -200,9 +213,9 @@ export function QuoteForm({
         />
       </Field>
 
-      {state.message && state.status === "error" && (
+      {failure && (
         <p className="border border-danger/50 bg-surface p-4 text-sm text-danger" role="alert">
-          {state.message}
+          {failure}
         </p>
       )}
 
