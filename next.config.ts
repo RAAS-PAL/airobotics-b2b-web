@@ -39,6 +39,16 @@ const nextConfig: NextConfig = {
         destination: "/:lang/quote?robot=:robot",
         permanent: false,
       },
+      /* The C5 left the lineup when the SP50 replaced it, and its page went
+         with it, so links and search results that still point there hit a
+         404. The lineup is the nearest live page. Permanent, so search
+         engines drop the old address. Remove this if the C5 is shown again:
+         redirects run before pages, so it would hide the restored page. */
+      {
+        source: "/:lang(en|th)/robots/c5",
+        destination: "/:lang/robots",
+        permanent: true,
+      },
     ];
   },
 };

@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Analytics } from "@/components/analytics";
 import { SITE_URL } from "@/lib/site";
+import { shareCard } from "@/lib/page-metadata";
 import { locales, isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary, translator } from "@/lib/i18n/dictionary";
 
@@ -48,36 +49,14 @@ export async function generateMetadata({
       template: t("META.site_title_template", { page: "%s" }),
     },
     description: t("META.site_description"),
-    alternates: {
-      canonical: `/${lang}`,
-      languages: {
-        en: "/en",
-        th: "/th",
-        "x-default": "/th",
-      },
-    },
-    /* Share previews — what LINE, Facebook and Slack render when someone
-     * pastes a link. Set here for every route rather than through the
-     * app/opengraph-image file convention: the root layout lives under
-     * app/[lang], so that convention emitted /-/opengraph-image.png with the
-     * dynamic segment unresolved, and a URL the crawler cannot fetch means no
-     * picture at all. public/og-card.png has one fixed URL. Rebuild it with
-     * scripts/build-og-image.mjs. */
+    /* No canonical, hreflang or share URL here. Pages inherit whatever the
+     * layout sets, so a canonical here made every page claim to be the
+     * homepage. Each page sets its own through pageMetadata(); a page that
+     * doesn't gets none, which search engines read as "this URL". */
     openGraph: {
-      type: "website",
-      siteName: "AI Robotics",
-      locale: lang === "th" ? "th_TH" : "en_US",
-      url: `/${lang}`,
+      ...shareCard(t, lang),
       title: t("META.site_title_default"),
       description: t("META.site_description"),
-      images: [
-        {
-          url: "/og-card.png",
-          width: 1200,
-          height: 630,
-          alt: t("META.og_image_alt"),
-        },
-      ],
     },
     twitter: {
       // Without this the card renders as a small thumbnail beside the text

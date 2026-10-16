@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { homeHero } from "@/lib/robot-images";
+import { pageMetadata } from "@/lib/page-metadata";
 import { RobotCard } from "@/components/robot-card";
 import { RobotSpotlight } from "@/components/robot-spotlight";
 import { HeroFleet } from "@/components/hero-fleet";
@@ -15,6 +17,20 @@ import { isLocale, localePath, type Locale } from "@/lib/i18n/config";
 import { Faq, FaqJsonLd } from "@/components/faq";
 import { OrganizationJsonLd } from "@/components/organization-json-ld";
 import { faqIds } from "@/lib/faq";
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const t = translator(await getDictionary(lang));
+  return pageMetadata({
+    t,
+    locale: lang,
+    path: "/",
+    description: t("META.site_description"),
+  });
+}
 
 /* The four headline proof figures. Values are locale-independent; only the
    labels are translated, so they live here rather than in the dictionary. */

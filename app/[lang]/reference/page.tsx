@@ -6,6 +6,7 @@ import { mediaForReference } from "@/lib/reference-media";
 import { Reveal } from "@/components/reveal";
 import { Eyebrow } from "@/components/ui";
 import { QuoteBand } from "@/components/quote-band";
+import { pageMetadata } from "@/lib/page-metadata";
 import { getDictionary, translator } from "@/lib/i18n/dictionary";
 import { localizeReferences } from "@/lib/i18n/localize-references";
 import { isLocale, type Locale } from "@/lib/i18n/config";
@@ -16,10 +17,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!isLocale(lang)) return {};
   const t = translator(await getDictionary(lang));
-  return {
+  return pageMetadata({
+    t,
+    locale: lang,
+    path: "/reference",
     title: t("REFERENCE.meta_title"),
     description: t("REFERENCE.meta_description"),
-  };
+  });
 }
 
 export default async function ReferencePage({
