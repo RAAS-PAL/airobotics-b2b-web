@@ -120,8 +120,14 @@ export default async function RobotPage({
                 { name: robot.model, path: localePath(locale, `/robots/${robot.slug}`) },
               ]}
             />
-            <h1 className="display mt-6 text-5xl text-snow sm:text-6xl">
-              {robot.model}
+            {/* "L3" alone told search engines nothing; the type line under it
+                puts the words buyers search for in the h1 without shrinking
+                the model name. */}
+            <h1 className="mt-6">
+              <span className="display block text-5xl text-snow sm:text-6xl">
+                {robot.model}
+              </span>
+              <span className="stencil mt-3 block text-fog">{robot.kind}</span>
             </h1>
             <p className="display mt-3 text-2xl text-amber sm:text-3xl">
               {robot.tagline}
