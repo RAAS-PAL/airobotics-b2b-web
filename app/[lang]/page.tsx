@@ -13,6 +13,7 @@ import { localizeRobots } from "@/lib/i18n/localize-robots";
 import { localizeReferences } from "@/lib/i18n/localize-references";
 import { isLocale, localePath, type Locale } from "@/lib/i18n/config";
 import { Faq, FaqJsonLd } from "@/components/faq";
+import { OrganizationJsonLd } from "@/components/organization-json-ld";
 import { faqIds } from "@/lib/faq";
 
 /* The four headline proof figures. Values are locale-independent; only the
@@ -264,6 +265,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
         items={faqItems}
       />
       <FaqJsonLd items={faqItems} />
+      <OrganizationJsonLd description={t("META.site_description")} />
 
       <QuoteBand locale={locale} />
     </>

@@ -134,6 +134,7 @@ export default async function ContactDetailsPage({
                     ariaLabel={t("CONTACTPAGE.copy_aria", {
                       id: contact.line.id,
                     })}
+                    trackAs="line_copy"
                   />
                   <a
                     href={contact.line.url}
