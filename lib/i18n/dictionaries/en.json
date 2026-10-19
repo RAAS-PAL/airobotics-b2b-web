@@ -97,7 +97,7 @@
   "EMAIL.no_robot_selected": "Not sure yet — asked for a recommendation",
   "EMAIL.reply_button": "Reply to {firstname}",
   "EMAIL.reply_hint": "Or just hit reply — this email is addressed back to {email}.",
-  "FLEET.hero.body": "Two compact scrubbers for occupied buildings, an industrial workhorse for warehouse floors, a 3-in-1 machine that sweeps, scrubs and mops in one pass, and a fleet-capable dry sweeper — all reporting to the same AI Robotics app.",
+  "FLEET.hero.body": "Two compact scrubbers for occupied buildings, an industrial workhorse for warehouse floors, an AI spot cleaner that patrols for spills and litter and cleans only where needed, and an industrial sweeper with AI navigation and HEPA filtration that can work as a fleet — all reporting to the same AI Robotics app.",
   "FLEET.hero.eyebrow": "The fleet",
   "FLEET.hero.heading": "Wet or dry. Tight or vast. Covered.",
   "FLEET.meta_description": "Compare the AI Robotics fleet: L3 and L4 autonomous scrubbers, the L50 industrial workhorse, the SP50 AI spot cleaner and the S5 industrial sweeper.",

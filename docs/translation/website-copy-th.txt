@@ -395,8 +395,8 @@ EN: Wet or dry. Tight or vast. Covered.
 TH: พื้นเปียกหรือแห้ง พื้นที่แคบหรือกว้าง เรามีรุ่นที่เหมาะ
 
 [FLEET.hero.body]
-EN: Two compact scrubbers for occupied buildings, an industrial workhorse for warehouse floors, a 3-in-1 machine that sweeps, scrubs and mops in one pass, and a fleet-capable dry sweeper — all reporting to the same app.
-TH: หุ่นยนต์ขัดพื้นขนาดกะทัดรัด 2 รุ่นสำหรับอาคารที่มีผู้ใช้งาน, รุ่นประสิทธิภาพสูงสำหรับพื้นที่คลังสินค้า, หุ่นยนต์ 3-in-1 ที่กวาด ขัด และถูได้ในเที่ยวเดียว และหุ่นยนต์กวาดพื้นแบบแห้งที่รองรับการทำงานเป็น Fleet — ทั้งหมดสามารถติดตามและจัดการผ่านแอปเดียวกัน
+EN: Two compact scrubbers for occupied buildings, an industrial workhorse for warehouse floors, an AI spot cleaner that patrols for spills and litter and cleans only where needed, and an industrial sweeper with AI navigation and HEPA filtration that can work as a fleet — all reporting to the same AI Robotics app.
+TH: หุ่นยนต์ขัดพื้นขนาดกะทัดรัด 2 รุ่นสำหรับอาคารที่มีผู้ใช้งาน, รุ่นประสิทธิภาพสูงสำหรับพื้นที่คลังสินค้า, หุ่นยนต์ AI ที่ตรวจตราหาคราบหกและเศษขยะ แล้วทำความสะอาดเฉพาะจุด และหุ่นยนต์กวาดพื้นอุตสาหกรรมที่ใช้ AI นำทาง พร้อมกรอง HEPA ที่รองรับการทำงานเป็น Fleet — ทั้งหมดสามารถติดตามและจัดการผ่านแอปเดียวกัน
 
 --- Comparison table ---
 
