@@ -97,12 +97,15 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           viewTemplate={t("HEROFLEET.card_view")}
         />
         <div className="relative z-10 mx-auto flex min-h-[92svh] max-w-6xl flex-col items-center justify-between px-5 pb-10 pt-16 text-center sm:pt-20">
-          {/* headline in the sky, above the machine */}
+          {/* headline in the sky, above the machine. The small line is the
+              h1 because it says what the page is about in words buyers
+              search for; the big slogan is display copy, not a topic. Each
+              keeps the look it had, so only the markup changed. */}
           <div>
-            <p className="stencil text-amber">{t("HOME.hero.eyebrow")}</p>
-            <h1 className="display mx-auto mt-5 max-w-4xl text-4xl text-snow sm:text-5xl lg:text-6xl">
+            <h1 className="stencil text-amber">{t("HOME.hero.eyebrow")}</h1>
+            <p className="display mx-auto mt-5 max-w-4xl text-4xl text-snow sm:text-5xl lg:text-6xl">
               {t("HOME.hero.h1")}
-            </h1>
+            </p>
           </div>
 
           {/* lets the aisle and its vanishing point breathe */}

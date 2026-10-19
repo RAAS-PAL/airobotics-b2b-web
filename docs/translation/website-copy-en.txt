@@ -174,7 +174,7 @@ TH:
 --- Hero ---
 
 [HOME.hero.eyebrow]
-EN: AI Robotics · Autonomous cleaning fleet
+EN: Autonomous floor-cleaning robots for business
 TH:
 
 [HOME.hero.h1]
@@ -423,7 +423,7 @@ EN: Yes. We run demonstrations — get in touch and we will arrange one.
 TH: 
 
 [FLEET.meta_title]
-EN: The fleet
+EN: Compare 5 Floor Cleaning Robots
 TH:
 
 [FLEET.meta_description]
@@ -2759,7 +2759,7 @@ tab and in Google search results. Lower priority than everything
 above, but worth doing for Thai-language search visibility.
 
 [META.site_title_default]
-EN: AI Robotics — Autonomous Commercial Cleaning Robots
+EN: Commercial Floor Cleaning Robots in Thailand · AI Robotics
 TH:
 
 [META.site_title_template]
@@ -2772,7 +2772,7 @@ EN: An AI Robotics autonomous scrubber in an empty warehouse aisle at night
 TH: 
 
 [META.site_description]
-EN: AI Robotics supplies autonomous floor-cleaning robots for hospitals, warehouses, retail and schools. Request a quote for the L3, L4 and L50 scrubbers, the SP50 AI spot cleaner or the S5 industrial sweeper.
+EN: Autonomous floor scrubbers and sweepers for hospitals, factories, warehouses and malls in Thailand. Request a quote, usually answered within one business day.
 TH:
 
 
