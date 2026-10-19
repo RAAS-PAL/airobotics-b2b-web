@@ -439,7 +439,7 @@ EN: Wet or dry. Tight or vast. Covered.
 TH:
 
 [FLEET.hero.body]
-EN: Two compact scrubbers for occupied buildings, an industrial workhorse for warehouse floors, a 3-in-1 machine that sweeps, scrubs and mops in one pass, and a fleet-capable dry sweeper — all reporting to the same AI Robotics app.
+EN: Two compact scrubbers for occupied buildings, an industrial workhorse for warehouse floors, an AI spot cleaner that patrols for spills and litter and cleans only where needed, and an industrial sweeper with AI navigation and HEPA filtration that can work as a fleet — all reporting to the same AI Robotics app.
 TH:
 
 --- Comparison table ---
