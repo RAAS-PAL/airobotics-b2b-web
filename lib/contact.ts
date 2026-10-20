@@ -21,9 +21,30 @@ export const contact = {
 /** Street address, per locale — a Thai company's address reads differently in
  *  each script, so it isn't one shared string.
  *
- *  Empty until confirmed. The page renders no address block rather than a
- *  placeholder: a wrong address on a contact page is worse than none. */
+ *  An empty list renders no address block rather than a placeholder: a wrong
+ *  address on a contact page is worse than none. */
 export const contactAddress: Record<Locale, string[]> = {
-  en: [],
-  th: [],
+  en: [
+    "99/40 Software Park Building, Moo 4",
+    "Chaengwattana Rd., Khlong Kluea, Pak Kret",
+    "Nonthaburi 11120, Thailand",
+  ],
+  th: [
+    "เลขที่ 99/40 อาคารซอฟต์แวร์ปาร์ค หมู่ 4",
+    "ถนนแจ้งวัฒนะ ตำบลคลองเกลือ อำเภอปากเกร็ด",
+    "จังหวัดนนทบุรี 11120",
+  ],
+};
+
+/** The same address split into schema.org PostalAddress fields, for the
+ *  Organization structured data. Change it together with the lines above, and
+ *  keep both identical to the Google Business Profile: Google cross-checks
+ *  name, address and phone between the two and trusts neither if they differ. */
+export const postalAddress = {
+  streetAddress:
+    "99/40 Software Park Building, Moo 4, Chaengwattana Rd., Khlong Kluea",
+  addressLocality: "Pak Kret",
+  addressRegion: "Nonthaburi",
+  postalCode: "11120",
+  addressCountry: "TH",
 };

@@ -1,17 +1,15 @@
-import { contact } from "@/lib/contact";
+import { contact, postalAddress } from "@/lib/contact";
 import { SITE_URL } from "@/lib/site";
 
 /** Organization structured data: who the company is, for search engines.
- *  Google uses it to match the site to the business — name, logo, phone —
- *  and it is what lets the business be recognised as one entity across the
- *  site, Search Console and a Business Profile.
+ *  Google uses it to match the site to the business — name, logo, phone,
+ *  address — and it is what lets the business be recognised as one entity
+ *  across the site, Search Console and a Business Profile.
  *
  *  Contact details come from lib/contact.ts, so a change there updates this
- *  in the same commit and the two can never disagree.
- *
- *  No address yet. lib/contact.ts has none confirmed, and a schema address
- *  that differs from the Business Profile's is worse than none: Google treats
- *  mismatched name, address and phone as a reason to distrust both. */
+ *  in the same commit and the two can never disagree. The address is given
+ *  once, in English, whichever language the page is in: it describes one
+ *  company, and the Business Profile holds a single address too. */
 export function OrganizationJsonLd({ description }: { description: string }) {
   const json = JSON.stringify({
     "@context": "https://schema.org",
@@ -24,6 +22,7 @@ export function OrganizationJsonLd({ description }: { description: string }) {
     description,
     email: contact.email,
     telephone: contact.phone.dial,
+    address: { "@type": "PostalAddress", ...postalAddress },
     contactPoint: [
       {
         "@type": "ContactPoint",
