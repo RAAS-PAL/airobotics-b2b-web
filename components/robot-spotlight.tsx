@@ -13,6 +13,7 @@ import l4 from "@/public/robots/fleet/l4.webp";
 import l50 from "@/public/robots/fleet/l50.webp";
 import sp50 from "@/public/robots/fleet/sp50.webp";
 import s5 from "@/public/robots/fleet/s5.webp";
+import v3 from "@/public/robots/fleet/v3.webp";
 
 /* Front-facing trimmed cutouts, so every machine sits at a predictable scale
    as you flip through — mixed 3/4 views made the stage jump around. */
@@ -25,6 +26,7 @@ const stage: Record<
   l50: { img: l50, beacon: { x: 50, y: 4 } },
   sp50: { img: sp50, beacon: { x: 50, y: 4 } },
   s5: { img: s5, beacon: { x: 30, y: 6 } },
+  v3: { img: v3, beacon: { x: 52, y: 7 } },
 };
 
 /* Readouts sit at the edges of the stage, NOT tethered to parts of the machine.
@@ -113,7 +115,7 @@ export function RobotSpotlight({
           <div
             role="tablist"
             aria-label={strings.tablistLabel}
-            className="mt-7 grid grid-cols-5 gap-px border border-line bg-line"
+            className="mt-7 grid grid-cols-3 gap-px border border-line bg-line"
           >
             {robots.map((r, i) => (
               <button

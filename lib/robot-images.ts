@@ -46,6 +46,10 @@ import s5Vehicle from "@/public/robots/s5/s5-vehicle-recognition.webp";
 import s5Dust from "@/public/robots/s5/s5-dust-control.webp";
 import s5Maintenance from "@/public/robots/s5/s5-maintenance.webp";
 import s5Station from "@/public/robots/s5/s5-station.png";
+import v3Hero from "@/public/robots/v3/v3-hero-corridor.png";
+import v3Product from "@/public/robots/v3/v3-product.png";
+import v3Pickup from "@/public/robots/v3/v3-lobby-debris.png";
+import v3Dock from "@/public/robots/v3/v3-dock.png";
 
 export type RobotImages = {
   /** wide banner behind the product-page hero */
@@ -252,6 +256,26 @@ export const robotImages: Record<string, RobotImages> = {
       station: {
         src: s5Station,
         alt: "S5 charging station with docking fiducials in a white corridor",
+      },
+    },
+  },
+
+  v3: {
+    // The corridor shot widened to the left in the ink ground (feathered
+    // seam), so the machine sits in the right third like the other heroes
+    // and the headline has a dark field. On narrow viewports object-cover
+    // crops width, so the frame is held on the machine.
+    hero: v3Hero,
+    heroClass: "object-[78%_center]",
+    product: v3Product,
+    features: {
+      pickup: {
+        src: v3Pickup,
+        alt: "V3 sweeping tissues and coffee beans off a hotel lobby floor, at the edge of a rug",
+      },
+      dock: {
+        src: v3Dock,
+        alt: "V3 backed into its charging dock against a corridor wall",
       },
     },
   },

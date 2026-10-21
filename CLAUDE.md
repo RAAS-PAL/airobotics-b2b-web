@@ -2,8 +2,8 @@
 
 # AI Robotics
 
-B2B marketing site for autonomous commercial cleaning robots. Five machines
-(L3, L4, L50, C5, S5), sold as AI Robotics, quote-only — no prices on the site.
+B2B marketing site for autonomous commercial cleaning robots. Six machines
+(L3, L4, L50, SP50, S5, V3), sold as AI Robotics, quote-only — no prices on the site.
 
 **Before starting work, read [docs/project-context.md](docs/project-context.md).** It
 covers the stack, the design system, how robot content is wired, and the environment

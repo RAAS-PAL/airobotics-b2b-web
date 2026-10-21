@@ -6,7 +6,7 @@ Thailand by **AI ROBOTICS CO., LTD.** (บริษัท เอไอ โรโ
 **Live:** [airoboticsth.com](https://airoboticsth.com) · **Host:** Vercel, deployed
 from `main`
 
-Five machines — L3, L4, L50, SP50, S5 — each with its own page, plus a comparison
+Six machines — L3, L4, L50, SP50, S5, V3 — each with its own page, plus a comparison
 table, customer references, an FAQ and a quote form. Quote-only: **no prices appear
 anywhere on the site.**
 

@@ -42,6 +42,7 @@ function buildCompareRows(t: T, units: "metric" | "imperial"): CompareRow[] {
       l50: t("FLEET.table.l50.job"),
       sp50: t("FLEET.table.sp50.job"),
       s5: t("FLEET.table.s5.job"),
+      v3: t("FLEET.table.v3.job"),
     },
   },
   {
@@ -54,6 +55,7 @@ function buildCompareRows(t: T, units: "metric" | "imperial"): CompareRow[] {
       l50: "2,203 m²/h",
       sp50: `15,550 m²/h ${t("FLEET.table.productivity_spot")}`,
       s5: "2,500 m²/h",
+      v3: "1,000 m²/h",
     },
   },
   {
@@ -65,8 +67,9 @@ function buildCompareRows(t: T, units: "metric" | "imperial"): CompareRow[] {
           l50: "920 mm / 36.2 in",
           sp50: "800 mm / 31.5 in",
           s5: "810 mm / 31.9 in",
+          v3: "680 mm / 26.8 in",
         }
-      : { l3: "700 mm", l4: "810 mm", l50: "920 mm", sp50: "800 mm", s5: "810 mm" },
+      : { l3: "700 mm", l4: "810 mm", l50: "920 mm", sp50: "800 mm", s5: "810 mm", v3: "680 mm" },
   },
   {
     label: t("FLEET.table.row_tank"),
@@ -76,6 +79,7 @@ function buildCompareRows(t: T, units: "metric" | "imperial"): CompareRow[] {
       l50: `55 L ${t("FLEET.table.tank_solution")}`,
       sp50: `18 L ${t("FLEET.table.tank_dustbag")}`,
       s5: `50 L ${t("FLEET.table.tank_hopper")}`,
+      v3: `18 L ${t("FLEET.table.tank_dustbag")}`,
     },
   },
   {
@@ -86,6 +90,7 @@ function buildCompareRows(t: T, units: "metric" | "imperial"): CompareRow[] {
       l50: t("FLEET.table.l50.compute"),
       sp50: t("FLEET.table.sp50.compute"),
       s5: "100 TOPS",
+      v3: "100 TOPS",
     },
   },
   {
@@ -96,6 +101,7 @@ function buildCompareRows(t: T, units: "metric" | "imperial"): CompareRow[] {
       l50: t("FLEET.table.l50.lidar"),
       sp50: t("FLEET.table.sp50.lidar"),
       s5: "32-beam 3D",
+      v3: "96-beam 3D",
     },
   },
   {
@@ -106,6 +112,7 @@ function buildCompareRows(t: T, units: "metric" | "imperial"): CompareRow[] {
       l50: t("FLEET.table.l50.runtime"),
       sp50: t("FLEET.table.sp50.runtime"),
       s5: t("FLEET.table.s5.runtime"),
+      v3: t("FLEET.table.v3.runtime"),
     },
   },
   {
@@ -116,6 +123,7 @@ function buildCompareRows(t: T, units: "metric" | "imperial"): CompareRow[] {
       l50: t("FLEET.table.l50.bestfor"),
       sp50: t("FLEET.table.sp50.bestfor"),
       s5: t("FLEET.table.s5.bestfor"),
+      v3: t("FLEET.table.v3.bestfor"),
     },
   },
   ];
@@ -175,7 +183,7 @@ export default async function FleetPage({
           </Reveal>
 
           <div className="mt-10 overflow-x-auto">
-            <table className="w-full min-w-[1000px] border-collapse text-sm">
+            <table className="w-full min-w-[1150px] border-collapse text-sm">
               <thead>
                 <tr>
                   <th className="sr-only">{t("FLEET.table.row_job")}</th>

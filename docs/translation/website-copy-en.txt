@@ -234,7 +234,7 @@ EN: The fleet
 TH:
 
 [HOME.fleet.heading]
-EN: Five machines. Every floor covered.
+EN: Six machines. Every floor covered.
 TH:
 
 [HOME.fleet.compare_link]
@@ -327,7 +327,7 @@ EN: View the {model}
 TH:
 
 [SPOTLIGHT.cta_compare]
-EN: Compare all five
+EN: Compare all six
 TH:
 
 [SPECTABLE.units_label]
@@ -355,15 +355,15 @@ EN: What does "100 TOPS AI compute" mean?
 TH: 
 
 [HOME.faq.tops_a]
-EN: TOPS stands for trillion operations per second — a measure of how much AI processing the robot's onboard chip can do. On a cleaning machine that capacity goes on reading the LiDAR and cameras many times a second: spotting obstacles, planning a route, and recognising what is on the floor. More TOPS means the machine can run heavier perception models and react faster in a busy space. The L3 and S5 carry 100 TOPS of NVIDIA compute; the L4 carries 32 TOPS.
+EN: TOPS stands for trillion operations per second — a measure of how much AI processing the robot's onboard chip can do. On a cleaning machine that capacity goes on reading the LiDAR and cameras many times a second: spotting obstacles, planning a route, and recognising what is on the floor. More TOPS means the machine can run heavier perception models and react faster in a busy space. The L3, S5 and V3 carry 100 TOPS of NVIDIA compute; the L4 carries 32 TOPS.
 TH: 
 
 [HOME.faq.which_q]
-EN: Which of the five machines do we need?
+EN: Which of the six machines do we need?
 TH: 
 
 [HOME.faq.which_a]
-EN: It depends on the floor rather than the building. The L3 passes through 700 mm gaps, for tight retail, hospitals and schools. The L4 clears a standard doorway at 810 mm and scrubs to within 3 cm of the wall. The L50 is built for warehouse-scale open floor. The S5 sweeps dry debris in industrial settings. The SP50 patrols for scattered mess instead of scrubbing everything. Tell us the size, floor type and operating hours and we will recommend one.
+EN: It depends on the floor rather than the building. The L3 passes through 700 mm gaps, for tight retail, hospitals and schools. The L4 clears a standard doorway at 810 mm and scrubs to within 3 cm of the wall. The L50 is built for warehouse-scale open floor. The S5 sweeps dry debris in industrial settings. The SP50 patrols for scattered mess instead of scrubbing everything. The V3 sweeps and vacuums hard floors and carpet in lobbies, hotels and offices. Tell us the size, floor type and operating hours and we will recommend one.
 TH: 
 
 [HOME.faq.staff_q]
@@ -423,11 +423,11 @@ EN: Yes. We run demonstrations — get in touch and we will arrange one.
 TH: 
 
 [FLEET.meta_title]
-EN: Compare 5 Floor Cleaning Robots
+EN: Compare 6 Floor Cleaning Robots
 TH:
 
 [FLEET.meta_description]
-EN: Compare the AI Robotics fleet: L3 and L4 autonomous scrubbers, the L50 industrial workhorse, the SP50 AI spot cleaner and the S5 industrial sweeper.
+EN: Compare the AI Robotics fleet: L3 and L4 autonomous scrubbers, the L50 industrial workhorse, the SP50 AI spot cleaner, the S5 industrial sweeper and the V3 vacuum sweeper.
 TH:
 
 [FLEET.hero.eyebrow]
@@ -439,7 +439,7 @@ EN: Wet or dry. Tight or vast. Covered.
 TH:
 
 [FLEET.hero.body]
-EN: Two compact scrubbers for occupied buildings, an industrial workhorse for warehouse floors, an AI spot cleaner that patrols for spills and litter and cleans only where needed, and an industrial sweeper with AI navigation and HEPA filtration that can work as a fleet — all reporting to the same AI Robotics app.
+EN: Two compact scrubbers for occupied buildings, an industrial workhorse for warehouse floors, an AI spot cleaner that patrols for spills and litter and cleans only where needed, and an industrial sweeper with AI navigation and HEPA filtration that can work as a fleet, and a vacuum sweeper for carpet and hard floors in lobbies and offices — all reporting to the same AI Robotics app.
 TH:
 
 --- Comparison table ---
@@ -550,6 +550,18 @@ TH:
 EN: Industry, garages
 TH:
 
+[FLEET.table.v3.job]
+EN: Sweep + vacuum · carpet
+TH:
+
+[FLEET.table.v3.runtime]
+EN: 4–5 h
+TH:
+
+[FLEET.table.v3.bestfor]
+EN: Hotels, offices
+TH:
+
 [FLEET.table.l50.compute]
 EN: NVIDIA AI
 TH:
@@ -609,7 +621,7 @@ TH:
 ================================================================
 7. ROBOT DETAIL PAGE TEMPLATE  (page: /robots/[l3|l4|l50|c5|s5])
 ================================================================
-This is the fixed template wording shared by all five robot pages.
+This is the fixed template wording shared by all six robot pages.
 The robot-specific content (specs, features, descriptions) is in
 section 8 below.
 
@@ -648,7 +660,7 @@ EN: Not quite the fit?
 TH:
 
 [ROBOTDETAIL.crosssell_link]
-EN: Compare all five →
+EN: Compare all six →
 TH:
 
 [ROBOTDETAIL.card_view]
@@ -664,7 +676,7 @@ TH:
 ================================================================
 8. ROBOT DATA — model-specific content
 ================================================================
-Each robot (L3, L4, L50, SP50, S5) has the same shape: a kind, tagline,
+Each robot (L3, L4, L50, SP50, S5, V3) has the same shape: a kind, tagline,
 one-line pitch, three highlight bullets, a "best for" label, a
 "pick this if" paragraph, an intro paragraph, four headline stats,
 five feature blocks (each with an eyebrow label, title, body text,
@@ -2358,6 +2370,251 @@ TH:
 
 [ROBOT.s5.env4]
 EN: Logistics
+TH:
+
+
+----------------------------------------------------------------
+8.6  V3 — Robotic vacuum sweeper
+----------------------------------------------------------------
+
+[ROBOT.v3.kind]
+EN: Robotic vacuum sweeper
+TH:
+
+[ROBOT.v3.tagline]
+EN: Sweeps it. Vacuums it. Carpet too.
+TH:
+
+[ROBOT.v3.pitch]
+EN: AI vacuum sweeper that sweeps and vacuums hard floors and carpet in one machine — up to 1,000 m²/h, with H13 HEPA filtration.
+TH:
+
+[ROBOT.v3.highlight1]
+EN: Sweeps and vacuums in one pass
+TH:
+
+[ROBOT.v3.highlight2]
+EN: Hard floors and carpet
+TH:
+
+[ROBOT.v3.highlight3]
+EN: H13 HEPA filtration
+TH:
+
+[ROBOT.v3.bestfor]
+EN: Carpet & lobbies
+TH:
+
+[ROBOT.v3.pickif]
+EN: Your floors mix carpet and hard surfaces — hotel lobbies, offices, corridors — and the mess is dry: dust, paper, tissues, spilled coffee beans.
+TH:
+
+[ROBOT.v3.intro]
+EN: The V3 sweeps and vacuums in a single machine, on hard floors and carpet alike. A 100 TOPS NVIDIA platform and a 96-beam 3D LiDAR guide it along walls and under handrails, it finds litter and cleans just those patches, and an H13 HEPA filter keeps the dust it lifts out of the air.
+TH:
+
+[ROBOT.v3.stat1_label]
+EN: max productivity
+TH:
+
+[ROBOT.v3.stat2_label]
+EN: max suction
+TH:
+
+[ROBOT.v3.stat3_label]
+EN: passage width
+TH:
+
+[ROBOT.v3.stat4_label]
+EN: runtime
+TH:
+
+[ROBOT.v3.f1.eyebrow]
+EN: Navigation
+TH:
+
+[ROBOT.v3.f1.title]
+EN: Along the wall, under the rail
+TH:
+
+[ROBOT.v3.f1.body]
+EN: NVIDIA compute rated at 100 TOPS reads a 96-beam 3D LiDAR to map the floor and plan its own routes. It cleans tight to the wall and reaches in under handrails along walkways, where manual sweeping usually stops short.
+TH:
+
+[ROBOT.v3.f2.eyebrow]
+EN: Spot cleaning
+TH:
+
+[ROBOT.v3.f2.title]
+EN: Finds the mess, skips the rest
+TH:
+
+[ROBOT.v3.f2.body]
+EN: The V3 detects litter on its own and cleans those patches, passing over floor that is already clean instead of covering the whole area every run.
+TH:
+
+[ROBOT.v3.f3.eyebrow]
+EN: Filtration
+TH:
+
+[ROBOT.v3.f3.title]
+EN: H13 HEPA on the exhaust
+TH:
+
+[ROBOT.v3.f3.body]
+EN: What the V3 vacuums up stays in the machine. Its H13 HEPA filter captures 99.95% of particles at 0.3 microns, so fine dust ends up in the bag rather than back in the room.
+TH:
+
+[ROBOT.v3.f4.eyebrow]
+EN: Sweep + vacuum
+TH:
+
+[ROBOT.v3.f4.title]
+EN: Two jobs, one machine
+TH:
+
+[ROBOT.v3.f4.body]
+EN: Side brushes and a 700 rpm roller sweep debris in while 25 kPa of suction lifts it — fine dust, paper, tissues, coffee beans and general litter, on hard floors and carpet alike.
+TH:
+
+[ROBOT.v3.f4.bullet1]
+EN: Sweeping and vacuuming in the same pass
+TH:
+
+[ROBOT.v3.f4.bullet2]
+EN: Carpet vacuuming as well as hard floors
+TH:
+
+[ROBOT.v3.f4.bullet3]
+EN: Dust mopping with the optional Dust Mop Module
+TH:
+
+[ROBOT.v3.f5.eyebrow]
+EN: Docking
+TH:
+
+[ROBOT.v3.f5.title]
+EN: Back to the dock on its own
+TH:
+
+[ROBOT.v3.f5.body]
+EN: The V3 returns to its charging dock on its own. A 60 Ah LFP battery runs it for 4–5 hours and recharges in 1.5–2.
+TH:
+
+[ROBOT.v3.f5.bullet1]
+EN: Automatic return to the charging dock
+TH:
+
+[ROBOT.v3.f5.bullet2]
+EN: 4–5 h runtime, 1.5–2 h charge
+TH:
+
+[ROBOT.v3.f5.bullet3]
+EN: Supports the optional Dust Mop Module
+TH:
+
+[ROBOT.v3.specgroup1_title]
+EN: Cleaning
+TH:
+
+[ROBOT.v3.spec_maxproductivity]
+EN: Max productivity
+TH:
+
+[ROBOT.v3.spec_sweepingwidth]
+EN: Sweeping width
+TH:
+
+[ROBOT.v3.spec_maxsuction]
+EN: Max suction
+TH:
+
+[ROBOT.v3.spec_airflow]
+EN: Airflow
+TH:
+
+[ROBOT.v3.spec_rollerbrushspeed]
+EN: Roller brush speed
+TH:
+
+[ROBOT.v3.spec_debristray]
+EN: Debris tray
+TH:
+
+[ROBOT.v3.spec_dustbag]
+EN: Dust bag
+TH:
+
+[ROBOT.v3.spec_filtration]
+EN: Filtration
+TH:
+
+[ROBOT.v3.specgroup2_title]
+EN: Electrical & intelligence
+TH:
+
+[ROBOT.v3.spec_battery]
+EN: Battery
+TH:
+
+[ROBOT.v3.spec_chargingtime]
+EN: Charging time
+TH:
+
+[ROBOT.v3.spec_runtime]
+EN: Runtime
+TH:
+
+[ROBOT.v3.spec_aicompute]
+EN: AI compute
+TH:
+
+[ROBOT.v3.spec_lidar]
+EN: LiDAR
+TH:
+
+[ROBOT.v3.specgroup3_title]
+EN: Dimensions & movement
+TH:
+
+[ROBOT.v3.spec_maxspeed]
+EN: Max speed
+TH:
+
+[ROBOT.v3.spec_passagewidth]
+EN: Passage width
+TH:
+
+[ROBOT.v3.spec_length]
+EN: Length
+TH:
+
+[ROBOT.v3.spec_width]
+EN: Width
+TH:
+
+[ROBOT.v3.spec_height]
+EN: Height
+TH:
+
+[ROBOT.v3.spec_weight]
+EN: Weight
+TH:
+
+[ROBOT.v3.env1]
+EN: Hotels
+TH:
+
+[ROBOT.v3.env2]
+EN: Office buildings
+TH:
+
+[ROBOT.v3.env3]
+EN: Shopping malls
+TH:
+
+[ROBOT.v3.env4]
+EN: Airports
 TH:
 
 

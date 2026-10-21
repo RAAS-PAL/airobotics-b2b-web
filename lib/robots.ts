@@ -719,6 +719,109 @@ export const robots: Robot[] = [
     environments: ["Warehouses", "Manufacturing", "Parking garages", "Logistics"],
     compare: ["l50", "sp50"],
   },
+  /* Figures from the AI Robotics V3 spec sheet (Oct 2026). Productivity is
+     the sheet's maximum; nothing here is derived or estimated. */
+  {
+    slug: "v3",
+    model: "V3",
+    kind: "Robotic vacuum sweeper",
+    tagline: "Sweeps it. Vacuums it. Carpet too.",
+    pitch:
+      "AI vacuum sweeper that sweeps and vacuums hard floors and carpet in one machine — up to 1,000 m²/h, with H13 HEPA filtration.",
+    highlights: [
+      "Sweeps and vacuums in one pass",
+      "Hard floors and carpet",
+      "H13 HEPA filtration",
+    ],
+    bestFor: "Carpet & lobbies",
+    pickIf:
+      "Your floors mix carpet and hard surfaces — hotel lobbies, offices, corridors — and the mess is dry: dust, paper, tissues, spilled coffee beans.",
+    intro:
+      "The V3 sweeps and vacuums in a single machine, on hard floors and carpet alike. A 100 TOPS NVIDIA platform and a 96-beam 3D LiDAR guide it along walls and under handrails, it finds litter and cleans just those patches, and an H13 HEPA filter keeps the dust it lifts out of the air.",
+    heroStats: [
+      { value: "1,000", unit: "m²/h", label: "max productivity" },
+      { value: "25", unit: "kPa", label: "max suction" },
+      { value: "680", unit: "mm", label: "passage width" },
+      { value: "4–5", unit: "h", label: "runtime" },
+    ],
+    features: [
+      {
+        eyebrow: "Navigation",
+        title: "Along the wall, under the rail",
+        body: "NVIDIA compute rated at 100 TOPS reads a 96-beam 3D LiDAR to map the floor and plan its own routes. It cleans tight to the wall and reaches in under handrails along walkways, where manual sweeping usually stops short.",
+      },
+      {
+        eyebrow: "Spot cleaning",
+        title: "Finds the mess, skips the rest",
+        body: "The V3 detects litter on its own and cleans those patches, passing over floor that is already clean instead of covering the whole area every run.",
+      },
+      {
+        eyebrow: "Filtration",
+        title: "H13 HEPA on the exhaust",
+        body: "What the V3 vacuums up stays in the machine. Its H13 HEPA filter captures 99.95% of particles at 0.3 microns, so fine dust ends up in the bag rather than back in the room.",
+      },
+      {
+        eyebrow: "Sweep + vacuum",
+        title: "Two jobs, one machine",
+        body: "Side brushes and a 700 rpm roller sweep debris in while 25 kPa of suction lifts it — fine dust, paper, tissues, coffee beans and general litter, on hard floors and carpet alike.",
+        imageKey: "pickup",
+        bullets: [
+          "Sweeping and vacuuming in the same pass",
+          "Carpet vacuuming as well as hard floors",
+          "Dust mopping with the optional Dust Mop Module",
+        ],
+      },
+      {
+        eyebrow: "Docking",
+        title: "Back to the dock on its own",
+        body: "The V3 returns to its charging dock on its own. A 60 Ah LFP battery runs it for 4–5 hours and recharges in 1.5–2.",
+        imageKey: "dock",
+        bullets: [
+          "Automatic return to the charging dock",
+          "4–5 h runtime, 1.5–2 h charge",
+          "Supports the optional Dust Mop Module",
+        ],
+      },
+    ],
+    specGroups: [
+      {
+        title: "Cleaning",
+        specs: [
+          { label: "Max productivity", metric: "1,000 m²/h" },
+          { label: "Sweeping width", metric: "730 mm", imperial: "28.7 in" },
+          { label: "Max suction", metric: "25 kPa" },
+          { label: "Airflow", metric: "187 m³/h", imperial: "110 CFM" },
+          { label: "Roller brush speed", metric: "700 rpm" },
+          { label: "Debris tray", metric: "5 L", imperial: "1.3 gal" },
+          { label: "Dust bag", metric: "18 L", imperial: "4.8 gal" },
+          { label: "Filtration", metric: "H13 HEPA, 99.95% @ 0.3 µm" },
+        ],
+      },
+      {
+        title: "Electrical & intelligence",
+        specs: [
+          { label: "Battery", metric: "LFP, 60 Ah, 25.6 V DC" },
+          { label: "Charging time", metric: "1.5–2 h" },
+          { label: "Runtime", metric: "4–5 h" },
+          { label: "AI compute", metric: "100 TOPS (NVIDIA)" },
+          { label: "LiDAR", metric: "96-beam 3D" },
+        ],
+      },
+      {
+        title: "Dimensions & movement",
+        specs: [
+          { label: "Max speed", metric: "1.2 m/s", imperial: "3.9 ft/s" },
+          { label: "Passage width", metric: "680 mm", imperial: "26.8 in" },
+          { label: "Length", metric: "703 mm", imperial: "27.7 in" },
+          { label: "Width", metric: "583 mm", imperial: "23 in" },
+          { label: "Height", metric: "965 mm", imperial: "38 in" },
+          { label: "Weight", metric: "113 kg", imperial: "249 lbs" },
+        ],
+      },
+    ],
+    environments: ["Hotels", "Office buildings", "Shopping malls", "Airports"],
+    compare: ["s5", "sp50"],
+  },
 ];
 
 /** Everything the site should show. Listings, routes, the sitemap and the

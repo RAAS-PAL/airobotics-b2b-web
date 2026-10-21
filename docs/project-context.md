@@ -12,17 +12,18 @@ consumer. The site's single job is to **produce qualified quote requests**.
 
 Domain not yet registered. Site name is "AI Robotics" throughout.
 
-### The fleet — 5 machines
+### The fleet — 6 machines
 
 | Model | Kind | Signature fact | Origin |
 |---|---|---|---|
 | **L3** | Compact scrubber | 700 mm passage; voice control; 96-beam LiDAR | Cenobots |
 | **L4** | Edge-cleaning scrubber | Fits a standard doorway; scrubs to <3 cm of wall | Cenobots |
 | **L50** | High-capacity scrubber | 55 L tank; 40–60,000 ft² per charge | Cenobots |
-| **C5** | 3-in-1 cleaning machine | Sweeps + scrubs + mops in one pass; 90 L tank | Agibot |
+| **SP50** | AI spot cleaner | Patrols for scattered mess; 18 L dust bag | Cenobots |
 | **S5** | Industrial sweeper | Dry debris; TeamClean fleet mode | Cenobots |
+| **V3** | Vacuum sweeper | Sweeps + vacuums hard floors and carpet; H13 HEPA | Cenobots |
 
-**SP50 was dropped** — not sold. Do not re-add it.
+The **C5** (Agibot) stays in `lib/robots.ts` with `hidden: true` — not currently sold.
 
 All machines are branded and sold **as AI Robotics**. Manufacturer names belong in these
 docs, not in customer-facing copy.
@@ -165,7 +166,7 @@ slug to every row, or its column renders blank.
 |---|---|
 | `/` | Hero (headline above the machine, copy below — see [D-007](decisions.md#d-007)), animated L3 spotlight, ROI proof band, lineup, verticals, testimonials, quote CTA |
 | `/robots` | Lineup grid + 5-column comparison table |
-| `/robots/[slug]` | Static-generated for all 5 machines from one template |
+| `/robots/[slug]` | Static-generated for all 6 machines from one template |
 | `/contact` | Quote form. Accepts `?robot=<slug>` to pre-select a machine |
 | `not-found` | 404 |
 

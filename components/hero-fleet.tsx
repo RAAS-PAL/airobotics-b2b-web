@@ -8,6 +8,7 @@ import l4 from "@/public/robots/fleet/l4.webp";
 import l50 from "@/public/robots/fleet/l50.webp";
 import sp50 from "@/public/robots/fleet/sp50.webp";
 import s5 from "@/public/robots/fleet/s5.webp";
+import v3 from "@/public/robots/fleet/v3.webp";
 
 /* The fleet stands in a single line across the aisle, all at one depth.
    `items-end` puts every machine's wheels on the same line — which works
@@ -30,6 +31,7 @@ const fleet: { slug: string; img: StaticImageData }[] = [
   { slug: "l50", img: l50 },
   { slug: "sp50", img: sp50 },
   { slug: "s5", img: s5 },
+  { slug: "v3", img: v3 },
 ];
 
 /** Keeps the card on screen for the machines at either end of the line. */

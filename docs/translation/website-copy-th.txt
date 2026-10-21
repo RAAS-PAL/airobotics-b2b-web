@@ -234,8 +234,8 @@ EN: The fleet
 TH: กลุ่มหุ่นยนต์
 
 [HOME.fleet.heading]
-EN: Five machines. Every floor covered.
-TH: 5 รุ่น ครอบคลุมทุกพื้นที่
+EN: Six machines. Every floor covered.
+TH: 6 รุ่น ครอบคลุมทุกพื้นที่
 
 [HOME.fleet.compare_link]
 EN: Compare all models →
@@ -311,16 +311,16 @@ EN: What does "100 TOPS AI compute" mean?
 TH: คำว่า "AI compute 100 TOPS" หมายความว่าอย่างไร
 
 [HOME.faq.tops_a]
-EN: TOPS stands for trillion operations per second — a measure of how much AI processing the robot's onboard chip can do. On a cleaning machine that capacity goes on reading the LiDAR and cameras many times a second: spotting obstacles, planning a route, and recognising what is on the floor. More TOPS means the machine can run heavier perception models and react faster in a busy space. The L3 and S5 carry 100 TOPS of NVIDIA compute; the L4 carries 32 TOPS.
-TH: TOPS ย่อมาจาก trillion operations per second หรือหนึ่งล้านล้านคำสั่งต่อวินาที เป็นหน่วยวัดกำลังประมวลผล AI ของชิปบนตัวหุ่นยนต์ สำหรับหุ่นยนต์ทำความสะอาด กำลังประมวลผลนี้ใช้ในการอ่านข้อมูลจาก LiDAR และกล้องหลายครั้งต่อวินาที เพื่อตรวจจับสิ่งกีดขวาง วางแผนเส้นทาง และจำแนกสิ่งที่อยู่บนพื้น ค่า TOPS ที่สูงขึ้นหมายถึงการรองรับประมวลผล AI ที่ซับซ้อนได้มากขึ้นและตอบสนองได้เร็วกว่าในพื้นที่ที่มีคนพลุกพล่าน รุ่น L3 และ S5 ใช้กำลังประมวลผล NVIDIA 100 TOPS ส่วนรุ่น L4 ใช้ 32 TOPS
+EN: TOPS stands for trillion operations per second — a measure of how much AI processing the robot's onboard chip can do. On a cleaning machine that capacity goes on reading the LiDAR and cameras many times a second: spotting obstacles, planning a route, and recognising what is on the floor. More TOPS means the machine can run heavier perception models and react faster in a busy space. The L3, S5 and V3 carry 100 TOPS of NVIDIA compute; the L4 carries 32 TOPS.
+TH: TOPS ย่อมาจาก trillion operations per second หรือหนึ่งล้านล้านคำสั่งต่อวินาที เป็นหน่วยวัดกำลังประมวลผล AI ของชิปบนตัวหุ่นยนต์ สำหรับหุ่นยนต์ทำความสะอาด กำลังประมวลผลนี้ใช้ในการอ่านข้อมูลจาก LiDAR และกล้องหลายครั้งต่อวินาที เพื่อตรวจจับสิ่งกีดขวาง วางแผนเส้นทาง และจำแนกสิ่งที่อยู่บนพื้น ค่า TOPS ที่สูงขึ้นหมายถึงการรองรับประมวลผล AI ที่ซับซ้อนได้มากขึ้นและตอบสนองได้เร็วกว่าในพื้นที่ที่มีคนพลุกพล่าน รุ่น L3, S5 และ V3 ใช้กำลังประมวลผล NVIDIA 100 TOPS ส่วนรุ่น L4 ใช้ 32 TOPS
 
 [HOME.faq.which_q]
-EN: Which of the five machines do we need?
+EN: Which of the six machines do we need?
 TH: ควรเลือกหุ่นยนต์รุ่นไหนดี?
 
 [HOME.faq.which_a]
-EN: It depends on the floor rather than the building. The L3 passes through 700 mm gaps, for tight retail, hospitals and schools. The L4 clears a standard doorway at 810 mm and scrubs to within 3 cm of the wall. The L50 is built for warehouse-scale open floor. The S5 sweeps dry debris in industrial settings. The SP50 patrols for scattered mess instead of scrubbing everything. Tell us the size, floor type and operating hours and we will recommend one.
-TH: การเลือกรุ่นควรดูจากลักษณะพื้นที่เป็นหลัก มากกว่าดูจากประเภทของอาคาร รุ่น L3 ผ่านช่องกว้าง 700 mm ได้ เหมาะกับพื้นที่ค้าปลีกที่คับแคบ โรงพยาบาล และสถานศึกษา รุ่น L4 ผ่านประตูมาตรฐานที่ความกว้าง 810 mm และขัดพื้นได้ชิดผนังในระยะ 3 ซม. รุ่น L50 ออกแบบสำหรับพื้นที่โล่งขนาดคลังสินค้า รุ่น S5 กวาดเศษแห้งในพื้นที่อุตสาหกรรม ส่วนรุ่น SP50 ตรวจหาจุดที่สกปรกและทำความสะอาดเฉพาะบริเวณนั้นแทนการขัดพื้นทั้งหมด แจ้งขนาดพื้นที่ ประเภทพื้น และเวลาทำงานให้เราทราบ แล้วเราจะแนะนำรุ่นที่เหมาะสม
+EN: It depends on the floor rather than the building. The L3 passes through 700 mm gaps, for tight retail, hospitals and schools. The L4 clears a standard doorway at 810 mm and scrubs to within 3 cm of the wall. The L50 is built for warehouse-scale open floor. The S5 sweeps dry debris in industrial settings. The SP50 patrols for scattered mess instead of scrubbing everything. The V3 sweeps and vacuums hard floors and carpet in lobbies, hotels and offices. Tell us the size, floor type and operating hours and we will recommend one.
+TH: การเลือกรุ่นควรดูจากลักษณะพื้นที่เป็นหลัก มากกว่าดูจากประเภทของอาคาร รุ่น L3 ผ่านช่องกว้าง 700 mm ได้ เหมาะกับพื้นที่ค้าปลีกที่คับแคบ โรงพยาบาล และสถานศึกษา รุ่น L4 ผ่านประตูมาตรฐานที่ความกว้าง 810 mm และขัดพื้นได้ชิดผนังในระยะ 3 ซม. รุ่น L50 ออกแบบสำหรับพื้นที่โล่งขนาดคลังสินค้า รุ่น S5 กวาดเศษแห้งในพื้นที่อุตสาหกรรม รุ่น SP50 ตรวจหาจุดที่สกปรกและทำความสะอาดเฉพาะบริเวณนั้นแทนการขัดพื้นทั้งหมด ส่วนรุ่น V3 กวาดและดูดฝุ่นได้ทั้งพื้นแข็งและพรม เหมาะกับล็อบบี้ โรงแรม และสำนักงาน แจ้งขนาดพื้นที่ ประเภทพื้น และเวลาทำงานให้เราทราบ แล้วเราจะแนะนำรุ่นที่เหมาะสม
 
 [HOME.faq.staff_q]
 EN: Does this replace our cleaning staff?
@@ -379,12 +379,12 @@ EN: Yes. We run demonstrations — get in touch and we will arrange one.
 TH: ได้ เรามีบริการสาธิตการทำงาน กรุณาติดต่อเราเพื่อนัดหมาย
 
 [FLEET.meta_title]
-EN: Compare 5 Floor Cleaning Robots
-TH: เปรียบเทียบหุ่นยนต์ทำความสะอาดพื้น 5 รุ่น
+EN: Compare 6 Floor Cleaning Robots
+TH: เปรียบเทียบหุ่นยนต์ทำความสะอาดพื้น 6 รุ่น
 
 [FLEET.meta_description]
-EN: Compare the AI Robotics fleet: L3 and L4 autonomous scrubbers, the L50 industrial workhorse, the SP50 AI spot cleaner and the S5 industrial sweeper.
-TH: เปรียบเทียบหุ่นยนต์ทำความสะอาด 5 รุ่น: หุ่นยนต์ขัดพื้น L3, L4 และ L50 หุ่นยนต์ทำความสะอาดเฉพาะจุด SP50 และหุ่นยนต์กวาดพื้น S5 เลือกรุ่นที่เหมาะกับพื้นที่ของคุณ
+EN: Compare the AI Robotics fleet: L3 and L4 autonomous scrubbers, the L50 industrial workhorse, the SP50 AI spot cleaner, the S5 industrial sweeper and the V3 vacuum sweeper.
+TH: เปรียบเทียบหุ่นยนต์ทำความสะอาด 6 รุ่น: หุ่นยนต์ขัดพื้น L3, L4 และ L50 หุ่นยนต์ทำความสะอาดเฉพาะจุด SP50 หุ่นยนต์กวาดพื้น S5 และหุ่นยนต์กวาดและดูดฝุ่น V3 เลือกรุ่นที่เหมาะกับพื้นที่ของคุณ
 
 [FLEET.hero.eyebrow]
 EN: The fleet
@@ -395,8 +395,8 @@ EN: Wet or dry. Tight or vast. Covered.
 TH: พื้นเปียกหรือแห้ง พื้นที่แคบหรือกว้าง เรามีรุ่นที่เหมาะ
 
 [FLEET.hero.body]
-EN: Two compact scrubbers for occupied buildings, an industrial workhorse for warehouse floors, an AI spot cleaner that patrols for spills and litter and cleans only where needed, and an industrial sweeper with AI navigation and HEPA filtration that can work as a fleet — all reporting to the same AI Robotics app.
-TH: หุ่นยนต์ขัดพื้นขนาดกะทัดรัด 2 รุ่นสำหรับอาคารที่มีผู้ใช้งาน, รุ่นประสิทธิภาพสูงสำหรับพื้นที่คลังสินค้า, หุ่นยนต์ AI ที่ตรวจตราหาคราบหกและเศษขยะ แล้วทำความสะอาดเฉพาะจุด และหุ่นยนต์กวาดพื้นอุตสาหกรรมที่ใช้ AI นำทาง พร้อมกรอง HEPA ที่รองรับการทำงานเป็น Fleet — ทั้งหมดสามารถติดตามและจัดการผ่านแอปเดียวกัน
+EN: Two compact scrubbers for occupied buildings, an industrial workhorse for warehouse floors, an AI spot cleaner that patrols for spills and litter and cleans only where needed, and an industrial sweeper with AI navigation and HEPA filtration that can work as a fleet, and a vacuum sweeper for carpet and hard floors in lobbies and offices — all reporting to the same AI Robotics app.
+TH: หุ่นยนต์ขัดพื้นขนาดกะทัดรัด 2 รุ่นสำหรับอาคารที่มีผู้ใช้งาน, รุ่นประสิทธิภาพสูงสำหรับพื้นที่คลังสินค้า, หุ่นยนต์ AI ที่ตรวจตราหาคราบหกและเศษขยะ แล้วทำความสะอาดเฉพาะจุด และหุ่นยนต์กวาดพื้นอุตสาหกรรมที่ใช้ AI นำทาง พร้อมกรอง HEPA ที่รองรับการทำงานเป็น Fleet และหุ่นยนต์กวาดและดูดฝุ่นสำหรับพรมและพื้นแข็งในล็อบบี้และสำนักงาน — ทั้งหมดสามารถติดตามและจัดการผ่านแอปเดียวกัน
 
 --- Comparison table ---
 
@@ -506,6 +506,18 @@ TH: ศูนย์การค้า, สนามบิน, โรงงาน
 EN: Industry, garages
 TH: อุตสาหกรรม, อาคารจอดรถ
 
+[FLEET.table.v3.job]
+EN: Sweep + vacuum · carpet
+TH: กวาด + ดูดฝุ่น · พรม
+
+[FLEET.table.v3.runtime]
+EN: 4–5 h
+TH: ทำงาน 4–5 h
+
+[FLEET.table.v3.bestfor]
+EN: Hotels, offices
+TH: โรงแรม, สำนักงาน
+
 [FLEET.table.l50.compute]
 EN: NVIDIA AI
 TH: NVIDIA AI
@@ -565,7 +577,7 @@ TH: เฉพาะจุด
 ================================================================
 7. ROBOT DETAIL PAGE TEMPLATE  (page: /robots/[l3|l4|l50|c5|s5])
 ================================================================
-This is the fixed template wording shared by all five robot pages.
+This is the fixed template wording shared by all six robot pages.
 The robot-specific content (specs, features, descriptions) is in
 section 8 below.
 
@@ -604,8 +616,8 @@ EN: Not quite the fit?
 TH: ยังไม่แน่ใจว่ารุ่นนี้เหมาะหรือไม่?
 
 [ROBOTDETAIL.crosssell_link]
-EN: Compare all five →
-TH: เปรียบเทียบทั้ง 5 รุ่น →
+EN: Compare all six →
+TH: เปรียบเทียบทั้ง 6 รุ่น →
 
 [ROBOTDETAIL.card_view]
 EN: View →
@@ -620,7 +632,7 @@ TH: อยู่ระหว่างจัดเตรียมภาพ
 ================================================================
 8. ROBOT DATA — model-specific content
 ================================================================
-Each robot (L3, L4, L50, SP50, S5) has the same shape: a kind, tagline,
+Each robot (L3, L4, L50, SP50, S5, V3) has the same shape: a kind, tagline,
 one-line pitch, three highlight bullets, a "best for" label, a
 "pick this if" paragraph, an intro paragraph, four headline stats,
 five feature blocks (each with an eyebrow label, title, body text,
@@ -2317,6 +2329,251 @@ EN: Logistics
 TH: โลจิสติกส์
 
 
+----------------------------------------------------------------
+8.6  V3 — Robotic vacuum sweeper
+----------------------------------------------------------------
+
+[ROBOT.v3.kind]
+EN: Robotic vacuum sweeper
+TH: หุ่นยนต์กวาดและดูดฝุ่นอัตโนมัติ
+
+[ROBOT.v3.tagline]
+EN: Sweeps it. Vacuums it. Carpet too.
+TH: กวาด ดูดฝุ่น และดูดพรม ในเครื่องเดียว
+
+[ROBOT.v3.pitch]
+EN: AI vacuum sweeper that sweeps and vacuums hard floors and carpet in one machine — up to 1,000 m²/h, with H13 HEPA filtration.
+TH: หุ่นยนต์กวาดและดูดฝุ่นอัจฉริยะ ทำความสะอาดได้ทั้งพื้นแข็งและพรมในเครื่องเดียว — สูงสุด 1,000 ตร.ม./ชม. พร้อมระบบกรอง H13 HEPA
+
+[ROBOT.v3.highlight1]
+EN: Sweeps and vacuums in one pass
+TH: กวาดและดูดฝุ่นในรอบเดียว
+
+[ROBOT.v3.highlight2]
+EN: Hard floors and carpet
+TH: ใช้ได้ทั้งพื้นแข็งและพรม
+
+[ROBOT.v3.highlight3]
+EN: H13 HEPA filtration
+TH: กรองฝุ่นด้วย H13 HEPA
+
+[ROBOT.v3.bestfor]
+EN: Carpet & lobbies
+TH: พรมและล็อบบี้
+
+[ROBOT.v3.pickif]
+EN: Your floors mix carpet and hard surfaces — hotel lobbies, offices, corridors — and the mess is dry: dust, paper, tissues, spilled coffee beans.
+TH: พื้นที่ของคุณมีทั้งพรมและพื้นแข็ง เช่น ล็อบบี้โรงแรม สำนักงาน และทางเดิน และสิ่งสกปรกส่วนใหญ่เป็นของแห้ง เช่น ฝุ่น เศษกระดาษ ทิชชู หรือเมล็ดกาแฟที่หก
+
+[ROBOT.v3.intro]
+EN: The V3 sweeps and vacuums in a single machine, on hard floors and carpet alike. A 100 TOPS NVIDIA platform and a 96-beam 3D LiDAR guide it along walls and under handrails, it finds litter and cleans just those patches, and an H13 HEPA filter keeps the dust it lifts out of the air.
+TH: V3 กวาดและดูดฝุ่นได้ในเครื่องเดียว ทั้งบนพื้นแข็งและพรม ด้วยชิป NVIDIA 100 TOPS และ 3D LiDAR แบบ 96-beam จึงทำความสะอาดได้ชิดขอบผนังและเข้าถึงใต้ราวจับตามทางเดิน ตรวจจับขยะและทำความสะอาดเฉพาะจุด พร้อมกรองฝุ่นด้วย H13 HEPA เพื่อไม่ให้ฝุ่นละเอียดฟุ้งกลับสู่อากาศ
+
+[ROBOT.v3.stat1_label]
+EN: max productivity
+TH: ประสิทธิภาพสูงสุด
+
+[ROBOT.v3.stat2_label]
+EN: max suction
+TH: แรงดูดสูงสุด
+
+[ROBOT.v3.stat3_label]
+EN: passage width
+TH: ความกว้างทางผ่านขั้นต่ำ
+
+[ROBOT.v3.stat4_label]
+EN: runtime
+TH: ระยะเวลาทำงาน
+
+[ROBOT.v3.f1.eyebrow]
+EN: Navigation
+TH: การนำทาง
+
+[ROBOT.v3.f1.title]
+EN: Along the wall, under the rail
+TH: ชิดขอบผนัง ถึงใต้ราวจับ
+
+[ROBOT.v3.f1.body]
+EN: NVIDIA compute rated at 100 TOPS reads a 96-beam 3D LiDAR to map the floor and plan its own routes. It cleans tight to the wall and reaches in under handrails along walkways, where manual sweeping usually stops short.
+TH: ชิป NVIDIA กำลังประมวลผล 100 TOPS อ่านข้อมูลจาก 3D LiDAR แบบ 96-beam เพื่อสร้างแผนที่และวางเส้นทางได้เอง ทำความสะอาดได้ชิดขอบผนังและเข้าถึงใต้ราวจับตามทางเดิน ซึ่งเป็นจุดที่การกวาดด้วยมือมักทำได้ไม่ทั่วถึง
+
+[ROBOT.v3.f2.eyebrow]
+EN: Spot cleaning
+TH: Spot Cleaning
+
+[ROBOT.v3.f2.title]
+EN: Finds the mess, skips the rest
+TH: ทำความสะอาดเฉพาะจุดที่สกปรก
+
+[ROBOT.v3.f2.body]
+EN: The V3 detects litter on its own and cleans those patches, passing over floor that is already clean instead of covering the whole area every run.
+TH: V3 ตรวจจับขยะได้เองและทำความสะอาดเฉพาะบริเวณนั้น โดยข้ามพื้นที่ที่สะอาดแล้ว แทนการทำความสะอาดทั้งพื้นที่ในทุกรอบ
+
+[ROBOT.v3.f3.eyebrow]
+EN: Filtration
+TH: ระบบกรอง
+
+[ROBOT.v3.f3.title]
+EN: H13 HEPA on the exhaust
+TH: กรองฝุ่นด้วย H13 HEPA
+
+[ROBOT.v3.f3.body]
+EN: What the V3 vacuums up stays in the machine. Its H13 HEPA filter captures 99.95% of particles at 0.3 microns, so fine dust ends up in the bag rather than back in the room.
+TH: ฝุ่นที่ V3 ดูดขึ้นมาจะถูกเก็บไว้ในตัวเครื่อง ตัวกรอง H13 HEPA ดักจับอนุภาคขนาด 0.3 ไมครอนได้ 99.95% ฝุ่นละเอียดจึงถูกเก็บลงถุงเก็บฝุ่น ไม่ฟุ้งกลับสู่พื้นที่
+
+[ROBOT.v3.f4.eyebrow]
+EN: Sweep + vacuum
+TH: กวาด + ดูดฝุ่น
+
+[ROBOT.v3.f4.title]
+EN: Two jobs, one machine
+TH: สองงานในเครื่องเดียว
+
+[ROBOT.v3.f4.body]
+EN: Side brushes and a 700 rpm roller sweep debris in while 25 kPa of suction lifts it — fine dust, paper, tissues, coffee beans and general litter, on hard floors and carpet alike.
+TH: แปรงข้างและแปรงลูกกลิ้งความเร็ว 700 รอบ/นาที กวาดเศษขยะเข้าหาตัวเครื่อง พร้อมแรงดูด 25 kPa เก็บได้ทั้งฝุ่นละเอียด เศษกระดาษ ทิชชู เมล็ดกาแฟ และขยะทั่วไป ทั้งบนพื้นแข็งและพรม
+
+[ROBOT.v3.f4.bullet1]
+EN: Sweeping and vacuuming in the same pass
+TH: กวาดและดูดฝุ่นในรอบเดียวกัน
+
+[ROBOT.v3.f4.bullet2]
+EN: Carpet vacuuming as well as hard floors
+TH: ดูดพรมได้ นอกเหนือจากพื้นแข็ง
+
+[ROBOT.v3.f4.bullet3]
+EN: Dust mopping with the optional Dust Mop Module
+TH: ดันฝุ่นได้เมื่อติดตั้ง Dust Mop Module (อุปกรณ์เสริม)
+
+[ROBOT.v3.f5.eyebrow]
+EN: Docking
+TH: การชาร์จ
+
+[ROBOT.v3.f5.title]
+EN: Back to the dock on its own
+TH: กลับแท่นชาร์จอัตโนมัติ
+
+[ROBOT.v3.f5.body]
+EN: The V3 returns to its charging dock on its own. A 60 Ah LFP battery runs it for 4–5 hours and recharges in 1.5–2.
+TH: V3 กลับไปยังแท่นชาร์จได้เอง แบตเตอรี่ LFP 60 Ah ทำงานได้ต่อเนื่อง 4–5 ชั่วโมง และชาร์จใหม่ภายใน 1.5–2 ชั่วโมง
+
+[ROBOT.v3.f5.bullet1]
+EN: Automatic return to the charging dock
+TH: กลับแท่นชาร์จอัตโนมัติ
+
+[ROBOT.v3.f5.bullet2]
+EN: 4–5 h runtime, 1.5–2 h charge
+TH: ทำงาน 4–5 ชม. ชาร์จ 1.5–2 ชม.
+
+[ROBOT.v3.f5.bullet3]
+EN: Supports the optional Dust Mop Module
+TH: รองรับอุปกรณ์เสริม Dust Mop Module
+
+[ROBOT.v3.specgroup1_title]
+EN: Cleaning
+TH: การทำความสะอาด
+
+[ROBOT.v3.spec_maxproductivity]
+EN: Max productivity
+TH: ประสิทธิภาพสูงสุด
+
+[ROBOT.v3.spec_sweepingwidth]
+EN: Sweeping width
+TH: ความกว้างการกวาด
+
+[ROBOT.v3.spec_maxsuction]
+EN: Max suction
+TH: แรงดูดสูงสุด
+
+[ROBOT.v3.spec_airflow]
+EN: Airflow
+TH: อัตราการไหลของอากาศ
+
+[ROBOT.v3.spec_rollerbrushspeed]
+EN: Roller brush speed
+TH: ความเร็วแปรงลูกกลิ้ง
+
+[ROBOT.v3.spec_debristray]
+EN: Debris tray
+TH: ถาดเก็บขยะ
+
+[ROBOT.v3.spec_dustbag]
+EN: Dust bag
+TH: ถุงเก็บฝุ่น
+
+[ROBOT.v3.spec_filtration]
+EN: Filtration
+TH: ระบบกรอง
+
+[ROBOT.v3.specgroup2_title]
+EN: Electrical & intelligence
+TH: ระบบไฟฟ้าและ AI
+
+[ROBOT.v3.spec_battery]
+EN: Battery
+TH: ประเภทแบตเตอรี่
+
+[ROBOT.v3.spec_chargingtime]
+EN: Charging time
+TH: ระยะเวลาการชาร์จ
+
+[ROBOT.v3.spec_runtime]
+EN: Runtime
+TH: ระยะเวลาทำงาน
+
+[ROBOT.v3.spec_aicompute]
+EN: AI compute
+TH: ชิปประมวลผล AI
+
+[ROBOT.v3.spec_lidar]
+EN: LiDAR
+TH: เซ็นเซอร์นำทาง
+
+[ROBOT.v3.specgroup3_title]
+EN: Dimensions & movement
+TH: ขนาดและการเคลื่อนที่
+
+[ROBOT.v3.spec_maxspeed]
+EN: Max speed
+TH: ความเร็วเคลื่อนที่สูงสุด
+
+[ROBOT.v3.spec_passagewidth]
+EN: Passage width
+TH: ความกว้างทางผ่านขั้นต่ำ
+
+[ROBOT.v3.spec_length]
+EN: Length
+TH: ความยาว
+
+[ROBOT.v3.spec_width]
+EN: Width
+TH: ความกว้าง
+
+[ROBOT.v3.spec_height]
+EN: Height
+TH: ความสูง
+
+[ROBOT.v3.spec_weight]
+EN: Weight
+TH: น้ำหนักสุทธิ
+
+[ROBOT.v3.env1]
+EN: Hotels
+TH: โรงแรม
+
+[ROBOT.v3.env2]
+EN: Office buildings
+TH: อาคารสำนักงาน
+
+[ROBOT.v3.env3]
+EN: Shopping malls
+TH: ศูนย์การค้า
+
+[ROBOT.v3.env4]
+EN: Airports
+TH: สนามบิน
+
+
 ================================================================
 9. CONTACT / QUOTE PAGE  (page: /contact)
 ================================================================
@@ -2947,8 +3204,8 @@ EN: View the {model}
 TH: ดูรายละเอียด {model}
 
 [SPOTLIGHT.cta_compare]
-EN: Compare all five
-TH: เปรียบเทียบทั้ง 5 รุ่น
+EN: Compare all six
+TH: เปรียบเทียบทั้ง 6 รุ่น
 
 [HEROFLEET.card_view]
 EN: View the {model} →
