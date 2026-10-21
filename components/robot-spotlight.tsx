@@ -26,7 +26,7 @@ const stage: Record<
   l50: { img: l50, beacon: { x: 50, y: 4 } },
   sp50: { img: sp50, beacon: { x: 50, y: 4 } },
   s5: { img: s5, beacon: { x: 30, y: 6 } },
-  v3: { img: v3, beacon: { x: 52, y: 7 } },
+  v3: { img: v3, beacon: { x: 54, y: 8 } },
 };
 
 /* Readouts sit at the edges of the stage, NOT tethered to parts of the machine.
